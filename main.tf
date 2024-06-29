@@ -71,18 +71,18 @@ resource "aws_lambda_permission" "s3_invocation" {
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.my_lambda.function_name
   principal     = "s3.amazonaws.com"
-  source_arn    = "arn:aws:s3:::devops-tejas-new"
+  source_arn    = "arn:aws:s3:::${var.s3_bucket_name}"
 }
 
 # Create the S3 bucket notification to trigger the Lambda function for .csv files in csvdata/ prefix
 resource "aws_s3_bucket_notification" "bucket_notification" {
-  bucket = "devops-tejas-new"
+  bucket = var.s3_bucket_name
 
   lambda_function {
     lambda_function_arn = aws_lambda_function.my_lambda.arn
     events              = ["s3:ObjectCreated:*"]
 
-    filter_prefix = "csvdata/"
-    filter_suffix = ".csv"
+    filter_prefix = var.prefix
+    filter_suffix = var.suffix
   }
 }
