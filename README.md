@@ -36,7 +36,7 @@
 
 ### 3. Install jenkins on jenkins-server
 
-- For installation of jenkins you can checkout the setup files . 
+- For installation of jenkins, you can checkout the setup files . 
 - Access Jenkins at http://<EC2-Public-IP>:8080 .
 *If you are not creating a user in jenkins, make sure to copy the password jenkins gives you at the start*
 ```
@@ -48,8 +48,8 @@ cat /var/lib/jenkins/secrets/initialAdminPassword
 
 
 ### 4. Create a RDS database 
-- Create a RDS databse using easy create also select MySql and hit create .
-- After creation click on modify and enable public access.
+- Create a RDS databse using easy create; select MySql and hit create .
+- After creation, click on modify and enable public access.
 - Create a new database and a table to insert data. 
 
 ![Screenshot 2024-06-29 202947](https://github.com/Tejas4322/s3-to-rds-using-terraform/assets/141610398/7691e577-b7a3-4342-ab99-f761cc9c9a11)
@@ -62,7 +62,7 @@ cat /var/lib/jenkins/secrets/initialAdminPassword
 ### 1 . Install docker ans aws cli on jenkins-server
 
 - For installation of docker and aws cli you can checkout the setup file.
-- After installing docker run the following commands to grant acess to the user and jenkins to docker : 
+- After installing docker, run the following commands to grant acess to the user and jenkins to docker : 
 
 ```
 sudo chmod 666 /var/run/docker.sock
@@ -87,7 +87,7 @@ aws configure
 ### 2 . Setting up pipeline for Building and pushing docker image to ECR:
 
 - Go to Jenkins home > New Item > pipeline 
-- To build and push docker image to ecr put this script to check if it is working:
+- To build and push docker image to ECR, put this script to check if it is working:
 ```
 pipeline {
     agent any
@@ -144,7 +144,7 @@ pipeline {
 
 ### 1 . Install terraform on jenkins-server
 
-- For installation of terraform you can checkout the setup file.
+- For installation of terraform, you can checkout the setup file.
 
 ### 2 . Update the terraform file 
 - Put your variable in the variables.tf file .
@@ -222,7 +222,7 @@ pipeline {
 }
 ```
 
-- Build the pipeline using parameter apply 
+- Build the pipeline using parameter 'apply' 
 
 ![Screenshot 2024-06-29 205424](https://github.com/Tejas4322/s3-to-rds-using-terraform/assets/141610398/defcb6d3-1d90-4891-8ce5-cc4782ba0e99)
 
@@ -245,7 +245,7 @@ pipeline {
 ![Screenshot 2024-06-29 210734](https://github.com/Tejas4322/s3-to-rds-using-terraform/assets/141610398/1a562ad3-b604-438f-bb90-ce0bb8c74cfe)
 
 
-- To destroy the terreform resources change the parameter to destroy and run the pipeline.
+- To destroy the terreform resources change the parameter to 'destroy' and run the pipeline.
 
 ![Screenshot 2024-06-29 211009](https://github.com/Tejas4322/s3-to-rds-using-terraform/assets/141610398/dc9dfaca-32c0-4e95-9ff3-6f0c42c247bf)
 
