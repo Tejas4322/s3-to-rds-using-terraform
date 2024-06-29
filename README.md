@@ -38,6 +38,7 @@
 
 - For installation of jenkins, you can checkout the setup files . 
 - Access Jenkins at http://<EC2-Public-IP>:8080 .
+  
 *If you are not creating a user in jenkins, make sure to copy the password jenkins gives you at the start*
 ```
 cat /var/lib/jenkins/secrets/initialAdminPassword
@@ -86,8 +87,8 @@ aws configure
 
 ### 2 . Setting up pipeline for Building and pushing docker image to ECR:
 
-- Go to Jenkins home > New Item > pipeline 
-- To build and push docker image to ECR, put this script to check if it is working:
+- Go to Jenkins home > New Item > pipeline .
+- To build and push docker image to ECR, use this script to check if docker is working and if the image is getiing pused in the ECR:
 ```
 pipeline {
     agent any
@@ -222,7 +223,7 @@ pipeline {
 }
 ```
 
-- Build the pipeline using parameter 'apply' 
+- Build the pipeline using parameter 'apply'.
 
 ![Screenshot 2024-06-29 205424](https://github.com/Tejas4322/s3-to-rds-using-terraform/assets/141610398/defcb6d3-1d90-4891-8ce5-cc4782ba0e99)
 
@@ -231,7 +232,7 @@ pipeline {
 
 ### 3 . Verify the lambda function
 
-- Check the lambda dashboard , you'll se the function whith s3 trigger.
+- Check the lambda dashboard , you'll see the function whith s3 trigger.
 
 ![Screenshot 2024-06-29 210359](https://github.com/Tejas4322/s3-to-rds-using-terraform/assets/141610398/603bc4be-0699-413e-b617-943dac419a0e)
 
