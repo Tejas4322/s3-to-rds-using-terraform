@@ -7,12 +7,12 @@ from sqlalchemy import create_engine
 s3_client = boto3.client('s3')
 
 # Configuration (replace with your actual values)
-S3_BUCKET = 'devops-tejas-new'
-S3_KEY = 'csvdata/emp.csv'
-RDS_ENDPOINT = 'prod-database.cr3uq7sok2wz.us-east-1.rds.amazonaws.com'
-RDS_DB = 'employeedb'
-RDS_USER = 'admin'
-RDS_PASSWORD = 'Tejas2002'
+S3_BUCKET = bucket-name  
+S3_KEY = path-to-file eg('csvdata/emp.csv')
+RDS_ENDPOINT = rds-endpoint
+RDS_DB = database-name
+RDS_USER = user-name
+RDS_PASSWORD = password
 
 # Read the data from the .csv file present in the s3 bucket
 def read_data_from_s3(bucket, key):
