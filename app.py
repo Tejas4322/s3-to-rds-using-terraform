@@ -23,7 +23,7 @@ def read_data_from_s3(bucket, key):
 def push_to_rds(dataframe):
     try:
         engine = create_engine(f'mysql+pymysql://{RDS_USER}:{RDS_PASSWORD}@{RDS_ENDPOINT}/{RDS_DB}')
-        dataframe.to_sql('employee', engine, if_exists='replace', index=False)
+        dataframe.to_sql('employee', engine, if_exists='replace', index=False) #either 'replace' the data or 'append' to the existing data in 'if_exists' field
         print('Data pushed to RDS successfully')
     except Exception as e:
         print(f'Error pushing data to RDS: {e}')
