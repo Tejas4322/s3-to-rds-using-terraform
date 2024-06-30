@@ -93,17 +93,17 @@ aws configure
 pipeline {
     agent any
     environment {
-        AWS_ACCOUNT_ID="177537930619" - change to your acc id
-        AWS_DEFAULT_REGION="us-east-1" - change region if needed
-        IMAGE_REPO_NAME="s3-to-rds" - change to your ecr registry name
-        IMAGE_TAG="latest" - change the tag if needed
+        AWS_ACCOUNT_ID="177537930619" // change to your acc id
+        AWS_DEFAULT_REGION="us-east-1" // change region if needed
+        IMAGE_REPO_NAME="s3-to-rds" // change to your ecr registry name
+        IMAGE_TAG="latest" // change the tag if needed
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                # update this step by using pipeline syntax > checkout: checkout fom version contro;
+                // update this step by using pipeline syntax > checkout: checkout fom version contro;
                 checkout scm
             }
         }
@@ -158,17 +158,17 @@ pipeline {
 pipeline {
     agent any
     environment {
-        AWS_ACCOUNT_ID="177537930619"
-        AWS_DEFAULT_REGION="us-east-1"
-        IMAGE_REPO_NAME="s3-to-rds"
-        IMAGE_TAG="latest"
+        AWS_ACCOUNT_ID="177537930619" // change to your acc id
+        AWS_DEFAULT_REGION="us-east-1" // change region if needed
+        IMAGE_REPO_NAME="s3-to-rds" // change to your ecr registry name
+        IMAGE_TAG="latest" // change the tag if needed
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
     }
 
     stages {
         stage('Checkout') {
             steps {
-    # update this step by using pipeline syntax > checkout: checkout fom version contro;
+    // update this step by using pipeline syntax > checkout: checkout fom version contro;
                 checkout scm
             }
         }
