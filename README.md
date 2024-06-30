@@ -232,7 +232,7 @@ pipeline {
 
 ### 3 . Verify the lambda function
 
-- Check the lambda dashboard , you'll see the function whith s3 trigger.
+- Check the Lambda dashboard; you'll see the function with an S3 trigger. When you push a file to the bucket, the function will read the data from the file and push it to the RDS database.
 
 ![Screenshot 2024-06-29 210359](https://github.com/Tejas4322/s3-to-rds-using-terraform/assets/141610398/603bc4be-0699-413e-b617-943dac419a0e)
 
@@ -241,7 +241,7 @@ pipeline {
 ![Screenshot 2024-06-29 210747](https://github.com/Tejas4322/s3-to-rds-using-terraform/assets/141610398/8f521486-cabc-4857-9403-cdddf82033fe)
 
 
-- You can also watch logs on cloudwatch log group if the data is pushed successfully. 
+- You can also watch logs on the CloudWatch log group to verify if the data is pushed successfully or to debug any errors.
 
 ![Screenshot 2024-06-29 210734](https://github.com/Tejas4322/s3-to-rds-using-terraform/assets/141610398/1a562ad3-b604-438f-bb90-ce0bb8c74cfe)
 
