@@ -35,20 +35,20 @@ variable "my_ecr_repo" {
 
 variable "lambda_name" {
     description = "Name of lambda function"
-    default = "s3-to-rds" # Replace with your ECR repository name
+    default = "s3-to-rds" 
 }
 
 variable "s3_bucket_name" {
   description = "Name of the S3 bucket"
-  default     = "devops-tejas-new"
+  default     = "devops-tejas-new" # Replace with your bucket name
 }
 
 variable "prefix" {
     description = "Prefix for lambda trigger"
-    default = "csvdata/" # Replace with your ECR repository name
+    default = "csvdata/" # Replace with your path
 }
 
 variable "suffix" {
     description = "Suffix for lambda trigger"
-    default = ".csv" # Replace with your ECR repository name
+    default = ".csv" 
 }
