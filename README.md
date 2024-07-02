@@ -36,7 +36,7 @@
 
 ### 3. Install jenkins on jenkins-server
 
-- For installation of jenkins, you can checkout the setup files . 
+- For installation of jenkins, you can checkout the [setup file](setup.md) . 
 - Access Jenkins at http://<EC2-Public-IP>:8080 .
   
 *If you are not creating a user in jenkins, make sure to copy the password jenkins gives you at the start*
@@ -62,7 +62,7 @@ cat /var/lib/jenkins/secrets/initialAdminPassword
 
 ### 1 . Install docker ans aws cli on jenkins-server
 
-- For installation of docker and aws cli you can checkout the setup file.
+- For installation of docker and aws cli you can checkout the [setup file](setup.md) .
 - After installing docker, run the following commands to grant acess to the user and jenkins to docker : 
 
 ```
@@ -145,7 +145,7 @@ pipeline {
 
 ### 1 . Install terraform on jenkins-server
 
-- For installation of terraform, you can checkout the setup file.
+- For installation of terraform, you can checkout the [setup file](setup.md) .
 
 ### 2 . Update the terraform file 
 - Put your variable in the variables.tf file .
