@@ -21,10 +21,10 @@
 ### 1 . Launch EC2 Instance
 
     1. Go to the AWS Management Console.
-    2. Navigate to EC2 and launch a new instance of name (jenkins-master).
+    2. Navigate to EC2 and launch a new instance of name (jenkins).
     3. Provision an EC2 instance on AWS with Ubuntu 22.04.
-    4. Choose an instance type (atleast t2.small).
-    5. Configure instance details and add storage (atleast 10gb).
+    4. Choose an instance type (t2.small).
+    5. Configure instance details and add storage (10gb).
     6. Configure security group to allow SSH (port 22), HTTP (port 80), and Jenkins (port 8080).
     7. Launch the instance and connect via SSH.
 
